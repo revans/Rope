@@ -1,0 +1,11 @@
+= Rope
+
+  All your social under one Rope
+
+= TODO
+
+  - RSpec test for mongoid
+  - Generators
+  - Models
+  - Controllers
+  - Devise Integration
