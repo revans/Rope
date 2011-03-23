@@ -6,7 +6,7 @@ module Rope
     field :remember_token, :type => String 
 
     # TODO: Need to check for multiple logins since we are using for checkins
-    referenced_one :login_account, :class_name => 'Rope::LoginAccount'
+    references_one :login_account, :class_name => 'Rope::LoginAccount'
 
     def login
       login_account.login unless login_account.nil?

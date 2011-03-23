@@ -26,7 +26,7 @@ module Rope
     @@service_configs[:github] = Rope::ServiceConfig.new(app_key, app_secret, options)
   end
 
-  require "rope/engine" if defined?(Rails) && Rails::VERSION::MAJOR == 3
+  require "rope/engine" if defined?(Rails)
 
 end
 

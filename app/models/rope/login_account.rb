@@ -1,6 +1,6 @@
 module Rope 
   class LoginAccount 
-    include Mogoid::Document
+    include Mongoid::Document
 
     field :remote_account_id, :type => String
     field :name,              :type => String
