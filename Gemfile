@@ -7,6 +7,12 @@ gem 'oa-core', :require => 'omniauth/core'
 gem 'oa-oauth', :require => 'omniauth/oauth'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
+# api libraries 
+gem 'twitter'
+gem 'koala'
+gem 'linkedin'
+gem 'octopi'
+
 group :test do 
   gem "capybara", ">= 0.4.0"
   gem "webrat"
