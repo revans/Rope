@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{Rope}
-  s.version = "0.0.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Julius F"]
-  s.date = %q{2011-03-23}
+  s.date = %q{2011-03-24}
   s.description = %q{Social Engine}
   s.email = %q{baldrailers@gmail.com}
   s.extra_rdoc_files = [
@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
     "lib/extensions/action_controller/base.rb",
     "lib/generators/rope/rope_generator.rb",
     "lib/generators/rope/templates/README",
-    "lib/generators/rope/templates/role.rb",
+    "lib/generators/rope/templates/rope.rb",
     "lib/generators/rope/templates/user.rb",
     "lib/rope.rb",
     "lib/rope/engine.rb",
@@ -60,6 +60,7 @@ Gem::Specification.new do |s|
     "spec/dummy/config/initializers/secret_token.rb",
     "spec/dummy/config/initializers/session_store.rb",
     "spec/dummy/config/locales/en.yml",
+    "spec/dummy/config/mongoid.yml",
     "spec/dummy/config/routes.rb",
     "spec/dummy/public/404.html",
     "spec/dummy/public/422.html",
@@ -74,6 +75,12 @@ Gem::Specification.new do |s|
     "spec/dummy/public/stylesheets/.gitkeep",
     "spec/dummy/script/rails",
     "spec/integration/navigation_spec.rb",
+    "spec/models/rope/facebook_account_spec.rb",
+    "spec/models/rope/github_account_spec.rb",
+    "spec/models/rope/linked_in_account_spec.rb",
+    "spec/models/rope/login_account_spec.rb",
+    "spec/models/rope/twitter_account_spec.rb",
+    "spec/models/rope/user_spec.rb",
     "spec/rope_spec.rb",
     "spec/spec_helper.rb"
   ]
@@ -98,6 +105,12 @@ Gem::Specification.new do |s|
     "spec/dummy/config/initializers/session_store.rb",
     "spec/dummy/config/routes.rb",
     "spec/integration/navigation_spec.rb",
+    "spec/models/rope/facebook_account_spec.rb",
+    "spec/models/rope/github_account_spec.rb",
+    "spec/models/rope/linked_in_account_spec.rb",
+    "spec/models/rope/login_account_spec.rb",
+    "spec/models/rope/twitter_account_spec.rb",
+    "spec/models/rope/user_spec.rb",
     "spec/rope_spec.rb",
     "spec/spec_helper.rb"
   ]
