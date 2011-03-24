@@ -1,3 +1,5 @@
+require "linkedin"
+
 module Rope 
   class LinkedInAccount < LoginAccount 
     def assign_account_info(auth_hash)
