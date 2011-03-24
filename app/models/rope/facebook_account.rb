@@ -1,3 +1,5 @@
+require "koala"
+
 module Rope 
   class FacebookAccount < LoginAccount 
     def assign_account_info(auth_hash)
@@ -9,10 +11,31 @@ module Rope
     end
 
     def account_url
-      # TODO: Need to validate if login is nil then use uid
-      "http://facebook.com/#{self.login}"
+      url_stub = ''
+      unless self.login.nil?
+        url_stub = self.login
+      else
+        url_stub = self.remote_account_id
+      end
+
+      "http://facebook.com/#{url_stub}"
     end
 
-    # TODO: Add related api calls to this model like wall post and check ins
+    def post_to_wall(msg)
+      # TODO: Should be able to test for exceptions
+      @graph.put_object("me", "feed", :message => msg)
+    end
+
+    def checkins
+      @graph.get_object("me", "checkins")
+    end
+
+    private
+
+    def setup_koala
+      # TODO: This should be loaded first before calling the api
+      @graph = Koala::Facebook::GraphAPI.new(self.access_token)
+    end
+
   end
 end

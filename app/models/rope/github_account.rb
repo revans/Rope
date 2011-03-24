@@ -1,5 +1,6 @@
 # TODO: I think md5 is not that secure so we need to check if we can use different algo
 require "digest/md5"
+require "octopi"
 
 module Rope
   class GithubAccount < LoginAccount 

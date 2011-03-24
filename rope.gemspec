@@ -5,48 +5,159 @@
 
 Gem::Specification.new do |s|
   s.name = %q{Rope}
-  s.version = "0.0.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Julius F"]
-  s.date = %q{2011-03-23}
+  s.date = %q{2011-03-24}
   s.description = %q{Social Engine}
   s.email = %q{baldrailers@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
   ]
+  s.files = [
+    ".document",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE.txt",
+    "MIT-LICENSE",
+    "README.rdoc",
+    "Rakefile",
+    "VERSION",
+    "app/controller/rope/social_controller.rb",
+    "app/helpers/rope/social_helper.rb",
+    "app/models/rope/facebook_account.rb",
+    "app/models/rope/github_account.rb",
+    "app/models/rope/linked_in_account.rb",
+    "app/models/rope/login_account.rb",
+    "app/models/rope/twitter_account.rb",
+    "app/models/rope/user.rb",
+    "config/routes.rb",
+    "lib/extensions/action_controller/base.rb",
+    "lib/generators/rope/rope_generator.rb",
+    "lib/generators/rope/templates/README",
+    "lib/generators/rope/templates/rope.rb",
+    "lib/generators/rope/templates/user.rb",
+    "lib/rope.rb",
+    "lib/rope/engine.rb",
+    "lib/rope/service_config.rb",
+    "rope.gemspec",
+    "spec/dummy/Rakefile",
+    "spec/dummy/app/controllers/application_controller.rb",
+    "spec/dummy/app/helpers/application_helper.rb",
+    "spec/dummy/app/views/layouts/application.html.erb",
+    "spec/dummy/config.ru",
+    "spec/dummy/config/application.rb",
+    "spec/dummy/config/boot.rb",
+    "spec/dummy/config/environment.rb",
+    "spec/dummy/config/environments/development.rb",
+    "spec/dummy/config/environments/production.rb",
+    "spec/dummy/config/environments/test.rb",
+    "spec/dummy/config/initializers/backtrace_silencers.rb",
+    "spec/dummy/config/initializers/inflections.rb",
+    "spec/dummy/config/initializers/mime_types.rb",
+    "spec/dummy/config/initializers/secret_token.rb",
+    "spec/dummy/config/initializers/session_store.rb",
+    "spec/dummy/config/locales/en.yml",
+    "spec/dummy/config/mongoid.yml",
+    "spec/dummy/config/routes.rb",
+    "spec/dummy/public/404.html",
+    "spec/dummy/public/422.html",
+    "spec/dummy/public/500.html",
+    "spec/dummy/public/favicon.ico",
+    "spec/dummy/public/javascripts/application.js",
+    "spec/dummy/public/javascripts/controls.js",
+    "spec/dummy/public/javascripts/dragdrop.js",
+    "spec/dummy/public/javascripts/effects.js",
+    "spec/dummy/public/javascripts/prototype.js",
+    "spec/dummy/public/javascripts/rails.js",
+    "spec/dummy/public/stylesheets/.gitkeep",
+    "spec/dummy/script/rails",
+    "spec/integration/navigation_spec.rb",
+    "spec/models/rope/facebook_account_spec.rb",
+    "spec/models/rope/github_account_spec.rb",
+    "spec/models/rope/linked_in_account_spec.rb",
+    "spec/models/rope/login_account_spec.rb",
+    "spec/models/rope/twitter_account_spec.rb",
+    "spec/models/rope/user_spec.rb",
+    "spec/rope_spec.rb",
+    "spec/spec_helper.rb"
+  ]
   s.homepage = %q{http://github.com/codewranglers/Rope}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{All your Social Under One Rope}
+  s.test_files = [
+    "spec/dummy/app/controllers/application_controller.rb",
+    "spec/dummy/app/helpers/application_helper.rb",
+    "spec/dummy/config/application.rb",
+    "spec/dummy/config/boot.rb",
+    "spec/dummy/config/environment.rb",
+    "spec/dummy/config/environments/development.rb",
+    "spec/dummy/config/environments/production.rb",
+    "spec/dummy/config/environments/test.rb",
+    "spec/dummy/config/initializers/backtrace_silencers.rb",
+    "spec/dummy/config/initializers/inflections.rb",
+    "spec/dummy/config/initializers/mime_types.rb",
+    "spec/dummy/config/initializers/secret_token.rb",
+    "spec/dummy/config/initializers/session_store.rb",
+    "spec/dummy/config/routes.rb",
+    "spec/integration/navigation_spec.rb",
+    "spec/models/rope/facebook_account_spec.rb",
+    "spec/models/rope/github_account_spec.rb",
+    "spec/models/rope/linked_in_account_spec.rb",
+    "spec/models/rope/login_account_spec.rb",
+    "spec/models/rope/twitter_account_spec.rb",
+    "spec/models/rope/user_spec.rb",
+    "spec/rope_spec.rb",
+    "spec/spec_helper.rb"
+  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>, ["= 3.0.5"])
-      s.add_runtime_dependency(%q<sqlite3-ruby>, [">= 0"])
       s.add_runtime_dependency(%q<mongoid>, ["~> 2.0.0.rc.7"])
       s.add_runtime_dependency(%q<bson_ext>, ["~> 1.2.4"])
+      s.add_runtime_dependency(%q<oa-core>, [">= 0"])
+      s.add_runtime_dependency(%q<oa-oauth>, [">= 0"])
+      s.add_runtime_dependency(%q<bcrypt-ruby>, [">= 0"])
+      s.add_runtime_dependency(%q<twitter>, [">= 0"])
+      s.add_runtime_dependency(%q<koala>, [">= 0"])
+      s.add_runtime_dependency(%q<linkedin>, [">= 0"])
+      s.add_runtime_dependency(%q<octopi>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<rails>, ["= 3.0.5"])
-      s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
       s.add_dependency(%q<mongoid>, ["~> 2.0.0.rc.7"])
       s.add_dependency(%q<bson_ext>, ["~> 1.2.4"])
+      s.add_dependency(%q<oa-core>, [">= 0"])
+      s.add_dependency(%q<oa-oauth>, [">= 0"])
+      s.add_dependency(%q<bcrypt-ruby>, [">= 0"])
+      s.add_dependency(%q<twitter>, [">= 0"])
+      s.add_dependency(%q<koala>, [">= 0"])
+      s.add_dependency(%q<linkedin>, [">= 0"])
+      s.add_dependency(%q<octopi>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
     s.add_dependency(%q<rails>, ["= 3.0.5"])
-    s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
     s.add_dependency(%q<mongoid>, ["~> 2.0.0.rc.7"])
     s.add_dependency(%q<bson_ext>, ["~> 1.2.4"])
+    s.add_dependency(%q<oa-core>, [">= 0"])
+    s.add_dependency(%q<oa-oauth>, [">= 0"])
+    s.add_dependency(%q<bcrypt-ruby>, [">= 0"])
+    s.add_dependency(%q<twitter>, [">= 0"])
+    s.add_dependency(%q<koala>, [">= 0"])
+    s.add_dependency(%q<linkedin>, [">= 0"])
+    s.add_dependency(%q<octopi>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<rcov>, [">= 0"])
