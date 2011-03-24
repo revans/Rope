@@ -1,3 +1,5 @@
+require "twitter"
+
 module Rope 
   class TwitterAccount < LoginAccount 
     def assign_account_info(auth_hash)

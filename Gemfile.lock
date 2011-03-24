@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.5)
     activesupport (3.0.5)
     addressable (2.2.4)
+    api_cache (0.2.0)
     arel (2.0.9)
     bcrypt-ruby (2.1.4)
     bson (1.2.4)
@@ -46,6 +47,7 @@ GEM
     celerity (0.8.8)
     childprocess (0.1.8)
       ffi (~> 1.0.6)
+    crack (0.1.8)
     culerity (0.2.15)
     database_cleaner (0.6.6)
     diff-lcs (1.1.2)
@@ -55,20 +57,33 @@ GEM
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (< 2, >= 1.1.0)
+    faraday_middleware (0.3.2)
+      faraday (~> 0.5.4)
     ffi (1.0.7)
       rake (>= 0.8.7)
     git (1.2.5)
+    hashie (1.0.0)
+    httparty (0.7.4)
+      crack (= 0.1.8)
     i18n (0.5.0)
     jeweler (1.5.2)
       bundler (~> 1.0.0)
       git (>= 1.2.5)
       rake
+    json (1.5.1)
     json_pure (1.5.1)
+    koala (0.10.0)
+      json (>= 1.0)
+    linkedin (0.2.2)
+      nokogiri (~> 1.4.4)
+      oauth (~> 0.4.0)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (1.0.0)
+      nokogiri (>= 1.2.1)
     mime-types (1.16)
     mongo (1.2.4)
       bson (>= 1.2.4)
@@ -82,6 +97,7 @@ GEM
       mongoid-rspec
       rspec (~> 2)
     multi_json (0.0.5)
+    multi_xml (0.2.2)
     multipart-post (1.1.0)
     nokogiri (1.4.4)
     oa-core (0.2.0)
@@ -96,6 +112,11 @@ GEM
     oauth2 (0.1.1)
       faraday (~> 0.5.0)
       multi_json (~> 0.0.4)
+    octopi (0.4.0)
+      api_cache
+      httparty (>= 0.4.5)
+      mechanize (>= 0.9.3)
+      nokogiri (>= 1.3.1)
     polyglot (0.3.1)
     rack (1.2.2)
     rack-mount (0.6.13)
@@ -136,9 +157,17 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    simple_oauth (0.1.4)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
+    twitter (1.2.0)
+      faraday (~> 0.5.4)
+      faraday_middleware (~> 0.3.2)
+      hashie (~> 1.0.0)
+      multi_json (~> 0.0.5)
+      multi_xml (~> 0.2.0)
+      simple_oauth (~> 0.1.4)
     tzinfo (0.3.25)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
@@ -158,13 +187,17 @@ DEPENDENCIES
   capybara (>= 0.4.0)
   database_cleaner (~> 0.6.5)
   jeweler
+  koala
+  linkedin
   mongoid (~> 2.0.0.rc.7)
   mongoid-rspec
   oa-core
   oa-oauth
+  octopi
   rails (= 3.0.5)
   rcov
   rspec (~> 2.5.0)
   rspec-core (~> 2.5.0)
   rspec-rails (~> 2.5.0)
+  twitter
   webrat
