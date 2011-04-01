@@ -1,0 +1,2 @@
+class Gowalla
+end
